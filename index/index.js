@@ -64,7 +64,10 @@ function getInfo() {
           //     好处：直接在HTML页面中，在页面中渲染，减少对服务器请求！
           //     弊端：处理图片流字符串，把图片大小增加为原来30%；前端HTML加载费劲！
           //     场景：处理小图；雪碧图；
-          $(".userinfo img").show().css("display", "inline-block").attr("src", res.data.user_pic);
+          $(".userinfo img")
+            .show().css("display", "inline-block").attr("src", res.data.user_pic);
+
+          $(".avatar").hide();
 
         }
         //      名字第一个字！
@@ -76,7 +79,10 @@ function getInfo() {
           str = str.toUpperCase();
 
           // 3.设置
-          $(".avatar").show().css("display", "inline-block").text(str);
+          $(".avatar")
+            .show().css("display", "inline-block").text(str);
+
+          $(".userinfo img").hide();
           //      show方法：给DOM添加行内样式 display: inline;
           //      需要：单独设置css样式
         }
