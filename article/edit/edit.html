@@ -7,15 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../assets/lib/layui/css/layui.css">
     <link rel="stylesheet" href="../../assets/lib/cropper/cropper.css" />
-    <link rel="stylesheet" href="./publisher.css">
+    <link rel="stylesheet" href="./edit.css">
 </head>
 
 <body>
 
     <div class="layui-card">
-        <div class="layui-card-header">发布新文章</div>
+        <div class="layui-card-header">编辑文章</div>
         <div class="layui-card-body">
-            <form class="layui-form" action="">
+            <form class="layui-form" action="" lay-filter="edit">
+
+
                 <!-- 第一项：标题 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">文章标题</label>
@@ -24,6 +26,7 @@
                             autocomplete="off" class="layui-input">
                     </div>
                 </div>
+
 
 
                 <!-- 第二项：选择分类 -->
@@ -35,6 +38,7 @@
                         </select>
                     </div>
                 </div>
+
 
 
                 <!-- 第三项：内容 -->
@@ -69,23 +73,25 @@
                 </div>
 
 
+
                 <!-- 第五项：状态 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">文章状态</label>
                     <div class="layui-input-block">
-                        <input type="radio" name="state" value="已发布" title="已发布" checked>
-                        <input type="radio" name="state" value="草稿" title="草稿">
+                        <input type="radio" name="state" value="已发布" title="已发布">
+                        <input type="radio" name="state" value="草稿" title="草稿" checked>
                     </div>
                 </div>
-
 
 
                 <!-- 第六项：按钮 -->
                 <div class="layui-form-item">
                     <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit lay-filter="formDemo">确认添加</button>
+
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">确认修改</button>
                     </div>
                 </div>
+
 
 
 
@@ -94,19 +100,18 @@
     </div>
 
 
+
 </body>
-<!-- jq  layui -->
 <script src="../../assets/lib/layui/layui.all.js"></script>
 <script src="../../assets/lib/jquery.js"></script>
 
-<!-- 富文本编辑器插件 -->
 <script src="../../assets/lib/tinymce/tinymce.min.js"></script>
 <script src="../../assets/lib/tinymce/tinymce_setup.js"></script>
-<!-- 裁剪 -->
+
 <script src="../../assets/lib/cropper/Cropper.js"></script>
 <script src="../../assets/lib/cropper/jquery-cropper.js"></script>
-<!-- common -->
+
 <script src="../../common.js"></script>
-<script src="./publisher.js"></script>
+<script src="./edit.js"></script>
 
 </html>
